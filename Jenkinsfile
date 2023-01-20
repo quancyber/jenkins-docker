@@ -8,12 +8,7 @@ pipeline{
 
 	stages {
 	    
-	    stage('gitclone') {
-
-			steps {
-				git 'https://github.com/quancyber/jenkins-docker.git'
-			}
-		}
+	    
 
 		stage('Build') {
 
