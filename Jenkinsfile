@@ -30,6 +30,13 @@ pipeline{
 				sh 'docker push quancyber/jenkins-docker:latest'
 			}
 		}
+
+    stage('Run in Container') {
+
+			steps {
+				sh 'docker run --publish 3000:3000 --name testNodeJS -d --rm quancyber/jenkins-docker:latest'
+			}
+		}
 	}
 
 	post {
