@@ -47,14 +47,14 @@ pipeline{
 		stage('Remove current container if it exists') {
 
 			steps {
-				sh 'docker rm -f jenkins-mmt || true'
+				sh 'docker rm -f job1 || true'
 			}
 		}
 		
 		stage('Run in Container') {
 
 			steps {
-				sh 'docker run --publish 3000:3000 --name jenkins-mmt -d --rm quancyber/advanced-network-jenkins:latest'
+				sh 'docker run --publish 3000:3000 --name job1 -d --rm quancyber/advanced-network-jenkins:latest'
 			}
 		}
 	}
