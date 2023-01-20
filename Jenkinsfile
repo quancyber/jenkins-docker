@@ -40,7 +40,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push quancyber/advanced-network-jenkins'
+				sh 'docker push quancyber/advanced-network-jenkins:advanced-network-jenkins'
 			}
 		}
 		
