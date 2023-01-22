@@ -31,7 +31,7 @@ pipeline{
 			}
 		}
 
-    stage('Run in Container') {
+    	stage('Run in Container') {
 
 			steps {
 				sh 'docker run --publish 3000:3000 --name testNodeJS -d --rm quancyber/jenkins-docker:latest'
